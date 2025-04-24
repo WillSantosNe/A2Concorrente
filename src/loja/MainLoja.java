@@ -28,16 +28,15 @@ public class MainLoja {
             t.start();
         }
 
-        // Espera os compradores da fábrica terminarem
-        Thread.sleep(2000); // espera 2 segundos após produção acabar
+
+        Thread.sleep(2000);
 
         for (Loja loja : lojas) {
-            loja.aguardarCompradorFinalizar(); // espera o recebimento de carros parar
-            loja.encerrarCompras();            // só então avisa os clientes
+            loja.aguardarCompradorFinalizar(); 
+            loja.encerrarCompras();    
         }
      
 
-        // Espera os clientes terminarem
         for (Thread t : clientes) {
             try {
                 t.join();

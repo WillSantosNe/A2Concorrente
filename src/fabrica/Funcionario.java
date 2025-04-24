@@ -15,7 +15,7 @@ public class Funcionario implements Runnable {
             while (true) {
                 boolean produzido = estacao.produzirCarro(idFuncionario);
                 if (!produzido) break;
-                Thread.sleep(1000); // simula tempo de montagem
+                Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
